@@ -1,0 +1,27 @@
+
+<section id="noticias">
+
+	<div class="containerNoticias">
+		<div class="main-noticias" ng-controller="noticiasControler as vm">
+
+			<div class="galeriaResponsive" id="galeria-noticias">
+
+				<div class="modal-content" ng-style="styleDetalle">
+
+					<div>
+						<div>
+							<div uib-carousel active="active" interval="myInterval"
+								no-wrap="noWrapSlides">
+								<div uib-slide ng-repeat="slide in slides track by slide.id"
+									index="slide.id">
+									<img ng-src="{{slide.image}}" style="margin: auto;width:100%;height:100%;">								
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+</section>

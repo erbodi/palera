@@ -1,0 +1,35 @@
+
+<section id="listado-proyectos"	ng-controller="ProyectosControlador as vm">
+
+<div>
+	<div class="container">
+		<div class="main-proyectos">
+
+			<article ng-repeat="p in vm.proyectos">
+
+				<div class="responsive" ng-if="(p.url_img != '')">
+				
+					<div class="gallery" ng-if="p.lista_img.length > 0">
+						<a tooltip-placement="bottom" uib-tooltip="{{p.alt}}" href="" id="verDetalle" ng-click="vm.seleccionarProyecto(p.id) ; app.mostrarDetalleProyecto();"> 
+						      <img ng-src="{{p.url_img}}"  width="{{p.width}}" height="{{p.height}}">
+						</a> 						
+					</div>
+					
+					<div class="gallery" ng-if="p.lista_img.length == 0">
+						<a tooltip-placement="bottom" uib-tooltip="{{p.alt}}" href="" id="verDetalle"> 
+						      <img ng-src="{{p.url_img}}"  width="{{p.width}}" height="{{p.height}}">
+						</a> 						
+					</div>
+				</div>
+
+			</article>
+
+		</div>
+	</div>
+
+
+</div>
+
+
+
+</section>

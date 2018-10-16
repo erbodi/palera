@@ -1,0 +1,38 @@
+
+<section id="detalle-section">
+
+	<div class="containerGaleria">
+		<div class="main-proyectos" ng-controller="GaleriaControler as vm">
+
+			<div class="galeriaResponsive" id="detalle-proyecto">
+
+				<div class="modal-content texto" ng-style="styleDetalle">
+
+				<!-- 
+					<span class="close" ng-click="app.selecciona(0)">&times;</span>
+ 				 -->
+
+					<div class="div1">
+						<h2 class="fontTitArquitectos text-center"  ng-bind="vm.proyecto.titulo"></h2>
+					</div>
+
+					<div>
+						<div>
+							<div uib-carousel active="active" interval="myInterval"
+								no-wrap="noWrapSlides">
+								<div uib-slide ng-repeat="slide in slides track by slide.id"
+									index="slide.id">
+									<img ng-src="{{slide.image}}"  style="margin: auto;width: 100%;height:100%;">
+									<div class="fontTextoDetalleProyecto">
+										<h4 ng-bind="slide.nombre"></h4>
+										<p ng-bind="slide.descripcion"></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+</section>
